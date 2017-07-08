@@ -1,0 +1,52 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"><html><head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<style>
+{% load static %}
+body {
+    background-image: url("{% static "samapp\7.jpg" %}");
+    background-size: 100% 400%;
+    background-repeat: no-repeat;
+}
+
+#my_form p label,
+#my_form p input{
+    float:center ;
+    clear:right ;
+}
+
+</style>
+<META http-equiv="Content-Type" content="text/html; charset=utf-8"></head><body >
+  <center><b><i><h2><u></u></h2></i></b></center>
+
+     
+  <center><form method="post" target="_blank"  onsubmit="try {return window.confirm(&quot;You are submitting information to an external page.\nAre you sure?&quot;);} catch (e) {return false;}"></center>
+
+
+<body>
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+  
+   <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav navbar-right">
+          <li class="page-scroll">
+               <a href = "http://127.0.0.1:8000/samapp/home"><b>Logout</b></a>
+          </li>
+      </ul>
+</div>
+    
+  </div>
+</nav>
+<center>
+<h3><b>Laundry Services</b></h3>
+<b><font color = "blue">You need to enter the Number into text boxes </font></b>
+<form action="samapp/register/" method="post">
+{% csrf_token %}
+<align = "center">{{form.as_p }}</align>
+<a href = "http://127.0.0.1:8000/samapp/fast_delivery"><input type="submit" value="Submit" /></a>
+</form>
+</center>
+</body>
+</html>

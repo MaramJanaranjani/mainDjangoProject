@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body>
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+  
+   <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav navbar-right">
+          <li class="page-scroll">
+               <a href = "http://127.0.0.1:8000/samapp/home"><b>Logout</b></a>
+          </li>
+      </ul>
+</div>
+    
+  </div>
+</nav>
+<div class="container-fluid">
+<center><font color = "prasanna" size = "7"><b>Pick My Laundry</b></font><center>
+<table align = "center" border = "5" rowspan = "1" colspan = "35" bordercolor = "purple">
+ <tr>
+    <td>
+    <p class = "text-primary"><b>Services To Hostels</b></p>
+    <a href="http://127.0.0.1:8000/samapp/det">
+     {% load static %}
+       <img src = "{% static "samapp\hostel.jpg" %}" class="img-thumbnail" width="439" height="100"/>
+    </td>
+    </a>
+    <td>
+     <p class = "text-primary"><b>Services To Hospitals</b></p>
+     <a href="http://127.0.0.1:8000/samapp/det">
+     {% load static %}
+       <img src = "{% static "samapp\hospital.jpg" %}" class="img-thumbnail" width="439" height="100"/>
+     </a>
+    </td>
+    <td>
+    <p class = "text-primary"><b>Services To Hotels</b></p>
+    <a href="http://127.0.0.1:8000/samapp/det">
+     {% load static %}
+      <img src = "{% static "samapp\hotel.jpg" %}" class="img-thumbnail" width="439" height="100"/>
+    </td>
+    </a>
+ </tr>
+ <tr>
+    <td>
+      <p class = "text-primary"><b>Home Delivery</b></p>
+      <a href="http://127.0.0.1:8000/samapp/det">
+      {% load static %}
+      <img src = "{% static "samapp\home_delivery.jpg" %}" class="img-thumbnail" width="439" height="100"/>
+    </a>
+  </td>
+  <td>
+    <p class = "text-primary"><b>Service At Home</b></p>
+    <a href="http://127.0.0.1:8000/samapp/det">
+    {% load static %}
+      <img src = "{% static "samapp\service.jpg" %}" class="img-thumbnail" width="439" height="100"/>
+    </a>
+  </td>
+  <td>
+    <p class = "text-primary"><b>Ratings to Laundry Shops</b></p>
+    <a href="http://127.0.0.1:8000/samapp/ratings">
+    {% load static %}
+      <img src = "{% static "samapp\rating_key.jpg" %}" class="img-thumbnail" width="439" height="100"/>
+    </a>
+  </td>
+</tr>
+</table>
+</body>
+</html>

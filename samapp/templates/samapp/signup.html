@@ -1,0 +1,31 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"><html><head>
+<style>
+{% load static %}
+body {
+    background-image: url("{% static "samapp\4.jpg" %}");
+    background-size: 100% 200%;
+    background-repeat: no-repeat;
+}
+
+#my_form p label,
+#my_form p input{
+    float:center ;
+    clear:right ;
+}
+
+</style>
+<META http-equiv="Content-Type" content="text/html; charset=utf-8"></head><body >
+  <center><b><i><h2><u></u></h2></i></b></center>
+
+     
+  <center><form method="post" target="_blank"  onsubmit="try {return window.confirm(&quot;You are submitting information to an external page.\nAre you sure?&quot;);} catch (e) {return false;}"></center>
+
+{% block content %}
+  <h2>Sign up</h2>
+  <form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Sign up</button>
+  </form>
+{% endblock %}
+</body></html>

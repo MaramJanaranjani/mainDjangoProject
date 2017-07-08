@@ -1,0 +1,55 @@
+<DOCTYPE html>
+<html lang="en">
+
+<head>
+   <title>laundries</title>
+    <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<style>
+{% load static %}
+body {
+    background-image: url("{% static "samapp\4.jpg" %}");
+    background-size: 100% 200%;
+    background-repeat: no-repeat;
+}
+
+#my_form p label,
+#my_form p input{
+    float:center ;
+    clear:right ;
+}
+
+</style>
+<body bgcolor =  "#daf7a6">
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+  
+   <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav navbar-right">
+          <li class="page-scroll">
+               <a href = "http://127.0.0.1:8000/samapp/home"><b>Logout</b></a>
+          </li>
+      </ul>
+</div>
+    
+  </div>
+</nav>
+
+<h1><center><b>Laundry Shops Nearby</h1></b>
+  {% load static %}
+    <right><img src = "{% get_media_prefix %}sample/service.jpg"/></right>  
+  <table border ="1" align = "center">
+    {% for c in laundry_search %}
+    <tr>
+      <td> <a href = "http://127.0.0.1:8000/samapp/shop_view/{{c.id}}"><b><button type="button" class="btn">{{c.laundry_name}}</button></b></a></td>
+    </tr>
+    {% endfor %}
+    </center>
+</body>
+</html>
+

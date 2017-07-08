@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  
+  
+  <style>
+.dropbtn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+}
+
+.dropbtn:hover, .dropbtn:focus {
+    background-color: #3e8e41;
+}
+
+.dropdown {
+    float: right;
+    position: relative;
+    display: inline-block;
+    
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    overflow: auto;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    right: 0;
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown a:hover {background-color: #f1f1f1}
+
+.show {display:block;}
+</style>
+
+</head>
+<body>
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+  
+   <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav navbar-right">
+          <li class="page-scroll">
+              <a href="#about"><b>Logout</b></a>
+          </li>
+      </ul>
+</div>
+    
+  </div>
+</nav>
+<div class="container">
+  <p><center><font size="7" color="green">Ratings</font></center></p>
+  <p><center><font size="5" color="purple">Select the shop to rate their service</font></center></p>  
+  <br><br><br>
+
+  <center><b>Location:</b>
+  <select>
+  <option value="volvo">Hyderabad</option>
+  <option value="saab">Delhi</option>
+  <option value="opel">Rajahmundry</option>
+  <option value="audi">Guntur</option>
+  <option value="audi">Vizag</option>
+</select> </center>
+<br><br>
+<center>
+<center><b>Area:</b>
+  <select>
+  <option value="volvo">Kukatpalli</option>
+  <option value="saab">Madhura Nagar</option>
+  <option value="opel">Morampudi</option>
+  <option value="audi">JN Road</option>
+  <option value="audi">Devi Chowk</option>
+</select> </center>
+<br><br>
+<center><b>Shop:</b>
+  <select>
+  <option value="volvo">prasanna</option>
+  <option value="saab">anantha</option>
+  <option value="opel">jana</option>
+  <option value="audi">akki</option>
+  <option value="audi">Ramesh</option>
+</select> </center>
+<br><br>
+
+<center><b>Rating:</b>
+  <select>
+  <option value="volvo">5</option>
+  <option value="saab">4</option>
+  <option value="opel">3</option>
+  <option value="audi">2</option>
+  <option value="audi">1</option>
+</select> </center>
+<br><br>
+ <a href = "http://127.0.0.1:8000/samapp/index"><button type="button" onclick="alert('Thank You!')">Submit</button>
+ </a>
+
+
+</body>
+</html>

@@ -1,0 +1,21 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <title>laundries</title>
+</head>
+<body bgcolor = pink>
+ <h1><center><font face="verdana" color="green"><b>laundry shops</h1></b></font>
+   {% load static %}
+    <img src = "{% get_media_prefix %}{{img.images}}"/>
+    <table border ="1" align = "center">
+    {% for c in loc %}
+    <tr>
+       <td><b>{{c.laundry_name}}</b></td>
+    </tr>
+    {% endfor %}
+    </center>
+</body>
+</html>
+
